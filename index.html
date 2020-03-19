@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
-	<header>
-		<title>My Github Page</title>
-	</header>
-
-	<body>
-		<h1>Hello World</h1>
-	</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function() {
+        var index = 1;
+        setInterval(function() {
+          document.getElementsByTagName("title").innerText =
+            "Hello World " + idx;
+        }, 3000);
+      };
+    </script>
+  </body>
 </html>
