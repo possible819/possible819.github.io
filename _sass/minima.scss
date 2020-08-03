@@ -169,15 +169,22 @@ $on-laptop: 800px !default;
   }
 
   .list-thumbnail-wrapper {
-    margin: auto auto 10px auto;
+    margin: 10px 0px 0px 0px;
   }
 
   .list-thumbnail {
     width: initial;
   }
 
+  .recent-post-wrapper {
+    margin-top: 10px;
+  }
+
   .category {
     position: initial;
+  }
+  .post {
+    padding: 10px !important;
   }
 }
 
