@@ -26,10 +26,19 @@ layout: default
             <span class="tag">#{{tag}} </span>
             {%- endfor -%}
           </div>
-          {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
 
+          <!-- {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%} -->
+          <div class="thumbnail-wrapper">
+            {%- if post.thumbnail -%}
+            <img
+              class="post-thumbnail"
+              src="../../../../assets/{{post.dirpath}}/{{post.thumbnail}}"
+            />
+          </div>
+          {%- endif -%}
           <div class="recent-post-content">
-            {{ post.content }}
+            {%- if post.summary -%} {{post.summary}} {%- endif -%}
+            {{post.title}}
           </div>
         </li>
         {%- endfor -%}

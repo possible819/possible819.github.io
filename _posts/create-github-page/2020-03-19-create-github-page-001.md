@@ -6,6 +6,7 @@ date: 2020-03-19 04:08:20 +0900
 categories: Posting
 tags: [Github, Github page, Jekyll]
 thumbnail: "github.png"
+summary: "Github 페이지 만들기 Repository 생성 부터 Scaffolding 까지"
 indexes:
   [
     { id: "create-repository", display: "Repository 생성" },

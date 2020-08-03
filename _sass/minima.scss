@@ -91,6 +91,11 @@ $on-laptop: 800px !default;
   border-radius: 5px;
 }
 
+.post-list > li {
+  padding-bottom: 30px;
+  border-bottom: 1px solid $grey-color;
+}
+
 .post-link {
   display: inline;
   color: $text-color;
@@ -113,29 +118,20 @@ $on-laptop: 800px !default;
 }
 
 .recent-post-content {
+  flex: 1;
   margin-top: 10px;
-  max-height: 200px;
-  overflow: hidden;
   padding: 10px;
   background-color: #525a7c;
   border-radius: 5px;
 }
 
-.recent-post-content > p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* 라인수 */
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-  line-height: 1.2em;
-  height: 6em; /* line-height 가 1.2em 이고 3라인을 */
-  margin: 0;
-}
-
 .post-header {
   display: flex;
   flex-direction: column;
+}
+
+.thumbnail-wrapper {
+  display: flex;
 }
 
 .post-thumbnail {
