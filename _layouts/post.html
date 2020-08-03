@@ -8,37 +8,56 @@ layout: default
   itemtype="http://schema.org/BlogPosting"
 >
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">
-      {{ page.title | escape }}
-    </h1>
-    <p class="post-meta">
-      <time
-        class="dt-published"
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-      >
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
-        -%} {{ page.date | date: date_format }}
-      </time>
-    </p>
-
-    <div class="post-tags">
-      {%- for tag in page.tags -%}
-      <span class="tag">#{{tag}} </span>
-      {%- endfor -%}
+    <div class="page-navigator bottom-margin">
+      {%- if page.previous -%}
+      <a href="{{ page.previous.url }}">👈 {{page.previous.title}}</a>
+      {%- endif -%}
+      <div class="spacer"></div>
+      {%- if page.next -%}
+      <a href="{{ page.next.url }}">{{page.next.title}} 👉</a>
+      {%- endif -%}
     </div>
 
-    {%- if page.thumbnail -%}
+    <div class="post-header-wrapper">
+      <h1 class="post-title p-name" itemprop="name headline">
+        {{ page.title | escape }}
+      </h1>
+      <p class="post-meta">
+        <time
+          class="dt-published"
+          datetime="{{ page.date | date_to_xmlschema }}"
+          itemprop="datePublished"
+        >
+          {%- assign date_format = site.minima.date_format | default: "%b %-d,
+          %Y" -%} {{ page.date | date: date_format }}
+        </time>
+      </p>
+      <span class="category {{ page.category | downcase }}"
+        >{{ page.category}}</span
+      >
+    </div>
+  </header>
+
+  <div class="post-tags">
+    {%- for tag in page.tags -%}
+    <span class="tag">#{{tag}} </span>
+    {%- endfor -%}
+  </div>
+
+  {%- if page.thumbnail -%}
+  <div class="thumbnail-wrapper">
     <img
       class="post-thumbnail"
       src="../../../../assets/{{page.dirpath}}/{{page.thumbnail}}"
     />
-    {%- endif -%}
-  </header>
+  </div>
+  {%- endif -%}
 
-  <ul>
+  <ul class="content-list-wrapper">
     {%- for index in page.indexes -%}
-    <li>{{forloop.index}}. <a href="#{{index.id}}">{{index.display}}</a></li>
+    <li class="content-list">
+      <a href="#{{index.id}}">{{index.display}}</a>
+    </li>
     {%- endfor -%}
   </ul>
 
@@ -49,5 +68,13 @@ layout: default
   {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%-
   endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <div class="page-navigator">
+    {%- if page.previous -%}
+    <a href="{{ page.previous.url }}">👈 {{page.previous.title}}</a>
+    {%- endif -%}
+    <div class="spacer"></div>
+    {%- if page.next -%}
+    <a href="{{ page.next.url }}">{{page.next.title}} 👉</a>
+    {%- endif -%}
+  </div>
 </article>
