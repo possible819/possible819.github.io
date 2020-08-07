@@ -2,79 +2,78 @@
 layout: default
 ---
 
-<article
-  class="post h-entry"
-  itemscope
-  itemtype="http://schema.org/BlogPosting"
->
-  <header class="post-header">
-    <div class="page-navigator bottom-margin">
-      {%- if page.previous -%}
-      <a href="{{ page.previous.url }}">👈 {{page.previous.title}}</a>
-      {%- endif -%}
-      <div class="spacer"></div>
-      {%- if page.next -%}
-      <a href="{{ page.next.url }}">{{page.next.title}} 👉</a>
-      {%- endif -%}
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <div class="page-navigator bottom-margin">
+            {%- if page.previous -%}
+                <a href="{{ page.previous.url }}">👈
+                    {{page.previous.title}}</a>
+            {%- endif -%}
+            <div class="spacer"></div>
+            {%- if page.next -%}
+                <a href="{{ page.next.url }}">{{page.next.title}}
+                    👉</a>
+            {%- endif -%}
+        </div>
+
+        <div class="post-header-wrapper">
+            <h1 class="post-title p-name" itemprop="name headline">
+                {{ page.title | escape }}
+            </h1>
+            <p class="post-meta">
+                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d,
+          %Y" -%}
+                    {{ page.date | date: date_format }}
+                </time>
+            </p>
+            <span class="category {{ page.category | downcase }}">{{ page.category}}</span>
+        </div>
+    </header>
+
+    <div class="post-tags">
+        {%- for tag in page.tags -%}
+            <span class="tag">#{{tag}}
+            </span>
+        {%- endfor -%}
     </div>
 
-    <div class="post-header-wrapper">
-      <h1 class="post-title p-name" itemprop="name headline">
-        {{ page.title | escape }}
-      </h1>
-      <p class="post-meta">
-        <time
-          class="dt-published"
-          datetime="{{ page.date | date_to_xmlschema }}"
-          itemprop="datePublished"
-        >
-          {%- assign date_format = site.minima.date_format | default: "%b %-d,
-          %Y" -%} {{ page.date | date: date_format }}
-        </time>
-      </p>
-      <span class="category {{ page.category | downcase }}"
-        >{{ page.category}}</span
-      >
+    {%- if page.thumbnail -%}
+        <div class="thumbnail-wrapper">
+            <img class="post-thumbnail" src="../../../../assets/{{page.dirpath}}/{{page.thumbnail}}"/>
+        </div>
+    {%- endif -%}
+
+    <blockquote>
+        <p>{{ page.summary }}</p>
+    </blockquote>
+
+    <ul class="content-list-wrapper">
+        {%- for index in page.indexes -%}
+            <li class="content-list">
+                <a href="#{{index.id}}">{{index.display}}</a>
+            </li>
+        {%- endfor -%}
+    </ul>
+
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
     </div>
-  </header>
 
-  <div class="post-tags">
-    {%- for tag in page.tags -%}
-    <span class="tag">#{{tag}} </span>
-    {%- endfor -%}
-  </div>
-
-  {%- if page.thumbnail -%}
-  <div class="thumbnail-wrapper">
-    <img
-      class="post-thumbnail"
-      src="../../../../assets/{{page.dirpath}}/{{page.thumbnail}}"
-    />
-  </div>
-  {%- endif -%}
-
-  <ul class="content-list-wrapper">
-    {%- for index in page.indexes -%}
-    <li class="content-list">
-      <a href="#{{index.id}}">{{index.display}}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%} {%-
+    {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+    {%-
   endif -%}
 
-  <div class="page-navigator">
-    {%- if page.previous -%}
-    <a href="{{ page.previous.url }}">👈 {{page.previous.title}}</a>
-    {%- endif -%}
-    <div class="spacer"></div>
-    {%- if page.next -%}
-    <a href="{{ page.next.url }}">{{page.next.title}} 👉</a>
-    {%- endif -%}
-  </div>
+    <div class="page-navigator">
+        {%- if page.previous -%}
+            <a href="{{ page.previous.url }}">👈
+                {{page.previous.title}}</a>
+        {%- endif -%}
+        <div class="spacer"></div>
+        {%- if page.next -%}
+            <a href="{{ page.next.url }}">{{page.next.title}}
+                👉</a>
+        {%- endif -%}
+    </div>
 </article>

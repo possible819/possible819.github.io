@@ -6,7 +6,7 @@ date: 2020-03-20 00:00:00 +0900
 category: Posting
 tags: [Github, Github page, Jekyll]
 thumbnail: "jekyll.png"
-summary: "Github 페이지 만들기 - Jekyll 설치 & Scaffolding"
+summary: "Github Page 제작기 - Jekyll 설치 & Scaffolding"
 indexes:
   [
     { id: "jekyll-installation", display: "Local 환경에 Jekyll 설치하기" },

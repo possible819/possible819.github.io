@@ -6,7 +6,7 @@ date: 2020-08-04 02:24:00 +0900
 category: Posting
 tags: [Github, Github page, Jekyll, Theme, Layout, Minima]
 thumbnail: "theme.png"
-summary: "Github 페이지 만들기 - Theme & Layout"
+summary: "Github Page 제작기 - Theme & Layout"
 indexes:
   [
     { id: "find-theme", display: "Theme 파일 찾기" },
