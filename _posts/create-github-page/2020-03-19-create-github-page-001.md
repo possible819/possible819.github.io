@@ -2,11 +2,10 @@
 layout: post
 dirpath: "create-github-page"
 title: "Github Page 제작기 #001"
-date: 2020-03-19 00:00:00 +0900
-category: Posting
+date: 2020-03-19 04:08:20 +0900
+categories: Posting
 tags: [Github, Github page, Jekyll]
 thumbnail: "github.png"
-summary: "Github Page 제작기 - Repository 생성"
 indexes:
   [
     { id: "create-repository", display: "Repository 생성" },
@@ -20,23 +19,21 @@ indexes:
 
 Repository, Profile 등을 통해 개발자 자신이 가지고 있는 관심사를 드러내기도 하는데, 오늘은 Github page 제작을 통해 나와 나의 프로젝트에 대해 소개 할 수 있도록 구성해 보고자 한다.
 
-<h4 id="create-repository">Repository 생성</h4>
+<h2 id="create-repository">1. Repository 생성</h2>
 Github page를 publishing 하기 위해서는 다음의 Format과 동일한 형태의 repository를 생성해야 한다.
 
-```
-https://github.com/username.github.io
-```
+<center>https://github.com/username.github.io</center>
 
 Github에 로그인 한 뒤 Repository 생성을 진행한다.
 
-<h4 id="create-index-html">Index.html 생성</h4>
+<h2 id="create-index-html">2. Index.html 생성</h2>
 생성한 Repository를 clone 받는다. clone 한 local repository의 내용을 수정하고 push 하는 것으로 github page의 업데이트가 가능하다.
 
 clone을 완료하고 index.html 파일을 생성한다. 해당 파일이 Github page의 entrypoint가 되도록 약속 되어 있는 파일이다.
 
-<h4 id="commit-and-push">Commit & Push</h4>
+<h2 id="commit-and-push">3. Commit & Push</h2>
 변경 사항을 저장하고 Repository에 commit 및 push 한다.
 
-<h4 id="access-website">웹사이트 접속</h4>
+<h2 id="access-website">4. 웹사이트 접속</h2>
 상기의 명시한 Repisotory URL (https://username.github.io)을 브라우저를 통해 열고 접속한다.
 index.html을 통해 생성된 화면이 정상적으로 로딩되면 완료!
