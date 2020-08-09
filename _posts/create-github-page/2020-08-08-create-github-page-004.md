@@ -53,5 +53,29 @@ npm init
 
 상기 keywords 설정은 [Generator 검색](https://yeoman.io/generators){:target="\_blank"}에 indexing 되도록 하기 위한 설정으로 필수 조건은 아님
 
+Generator 작성을 위해 `yeoman-generator`를 dependency로 추가해야 한다
+아래의 커맨드를 실행하여 dependency를 추가한다
+
+`package.json` 파일 생성이 완료 된 뒤 `files` property를 수정해야 한다
+`files`에 입력 될 내용은 작성중인 generator에서 사용할 파일을 Array 형식으로 입력한다
+
+```json
+{
+  ...
+  files: [
+    'generators'
+  ]
+}
+```
+
+그 외 항목들은 필요에 따라 수정한 뒤 저장한다
+
+```sh
+# npm을 사용하는 경우
+npm install --save yeoman-generator
+```
+
+
+
 <h4 id="test-generator">Generator 테스트</h4>
 본문 (Generator 테스트)
