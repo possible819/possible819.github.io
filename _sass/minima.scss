@@ -250,6 +250,10 @@ $on-laptop: 800px !default;
   color: $grey-color-light;
 }
 
+code.highlighter-rouge {
+  margin: 0px;
+  padding: 5px;
+}
 .highlighter-rouge {
   margin: 20px;
 }

@@ -25,7 +25,6 @@ Yeoman은 프로젝트 scafollding 도구로 반복적이고 정형화 되어 �
 
 <h4 id="install-yeoman">Yeoman 설치하기</h4>
 Yeoman도 하나의 node module이기 때문에 아래의 명령줄을 실핼하여 간단히 설치 할 수 있다.
-----------------------------------------------------------
 
 ```sh
 # 여러 프로젝트 경로에서 사용하기 때문에 global install
@@ -38,8 +37,7 @@ Generator의 경우에도 마찬가지로 여러 프로젝트 경로에서 사�
 
 <h4 id="create-generator">Generator 작성</h4>
 
-Generator 작성을 위해 작업할 디렉토리를 생성한다
-디렉토리의 명칭은 반드시 `generator-`를 prefix로 설정해야 한다
+Generator 작성을 위해 작업할 디렉토리를 생성한다 디렉토리의 명칭은 반드시 `generator-`를 **prefix**로 설정해야 한다
 
 ```sh
 mkdir generator-jekyll-doc
@@ -53,10 +51,7 @@ npm init
 
 진행되는 질의에 적절한 값을 입력하되 `keywords` 항목에 `yeoman-generator`를 입력한다
 
-> 상기 keywords 설정은 [Generator 검색](https://yeoman.io/generators)에 indexing 되도록 하기 위한 설정으로 필수 조건은 아님
-
-
-
+상기 keywords 설정은 [Generator 검색](https://yeoman.io/generators){:target="\_blank"}에 indexing 되도록 하기 위한 설정으로 필수 조건은 아님
 
 <h4 id="test-generator">Generator 테스트</h4>
 본문 (Generator 테스트)
