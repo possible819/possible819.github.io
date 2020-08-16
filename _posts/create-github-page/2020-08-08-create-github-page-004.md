@@ -164,7 +164,7 @@ npm link
 ```
 
 *link*가 생성되면 아래의 명령어를 통해 *generator*를 실행한다.
-```
+```sh
 # yo jekyll-doc:post
 yo $GENERATOR_NAME:$TYPE_OF_GENERATOR
 ```
