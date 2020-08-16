@@ -265,6 +265,10 @@ code {
   font-size: $small-font-size;
 }
 
+blockquote {
+  border-left-color: #0086B3;
+}
+
 .page-navigator {
   display: flex;
   font-size: $small-font-size;
