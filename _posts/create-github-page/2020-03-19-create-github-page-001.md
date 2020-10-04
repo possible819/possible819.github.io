@@ -6,6 +6,7 @@ date: 2020-03-19 04:08:20 +0900
 category: Posting
 tags: [Github, Github page, Jekyll]
 thumbnail: "github.png"
+summary: "Github Page 제작기 - Github Page 생성"
 indexes:
   [
     { id: "create-repository", display: "Repository 생성" },
@@ -15,7 +16,7 @@ indexes:
   ]
 ---
 
->요즘 사람들은 다양한 SNS를 통해 자신을 표현하듯, 개발자에게 있어 Github는 개발자 자신을 표현기에 가장 직관적인 방법이 아닐까 생각한다. Repository, Profile 등을 통해 개발자 자신이 가지고 있는 관심사를 드러내기도 하는데, 오늘은 Github page 제작을 통해 나와 나의 프로젝트에 대해 소개 할 수 있도록 구성해 보고자 한다.
+> 요즘 사람들은 다양한 SNS를 통해 자신을 표현하듯, 개발자에게 있어 Github는 개발자 자신을 표현기에 가장 직관적인 방법이 아닐까 생각한다. Repository, Profile 등을 통해 개발자 자신이 가지고 있는 관심사를 드러내기도 하는데, 오늘은 Github page 제작을 통해 나와 나의 프로젝트에 대해 소개 할 수 있도록 구성해 보고자 한다.
 
 <h4 id="create-repository">1. Repository 생성</h4>
 Github page를 publishing 하기 위해서는 다음의 Format과 동일한 형태의 repository를 생성해야 한다. Github에 로그인 한 뒤 Repository 생성을 진행한다.

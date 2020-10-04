@@ -3,56 +3,55 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%} {{ content }}
+    {%- if page.title -%}
+        <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+    {{ content }}
 
-  <div class="recent-list-wrapper">
-    <div class="recent-list">
-      {%- if site.posts.size > 0 -%}
+    <div class="recent-list-wrapper">
+        <div class="recent-list">
+            {%- if site.posts.size > 0 -%}
 
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-        <li>
-          <div class="list-header-wrapper">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d,
+                <ul class="post-list">
+                    {%- for post in site.posts -%}
+                        <li>
+                            <div class="list-header-wrapper">
+                                <a class="post-link" href="{{ post.url | relative_url }}">
+                                    {{ post.title | escape }}
+                                </a>
+                                {%- assign date_format = site.minima.date_format | default: "%b %-d,
             %Y" -%}
-            <sub class="post-meta">{{ post.date | date: date_format }}</sub>
+                                <sub class="post-meta">{{ post.date | date: date_format }}</sub>
 
-            <span class="category {{post.category | downcase}}"
-              >{{ post.category }}</span
-            >
-          </div>
+                                <span class="category {{post.category | downcase}}">{{ post.category }}</span>
+                            </div>
 
-          <!-- {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%} -->
-          <div class="content-wrapper">
-            <div class="list-thumbnail-wrapper">
-              {%- if post.thumbnail -%}
-              <img
-                class="list-thumbnail"
-                src="../../../../assets/{{post.dirpath}}/{{post.thumbnail}}"
-              />
-            </div>
+                            <!-- {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%} -->
+                            <div class="content-wrapper">
+                                {%- if post.thumbnail -%}
+                                    <div class="list-thumbnail-wrapper">
+                                        <img class="list-thumbnail" src="../../../../assets/{{post.dirpath}}/{{post.thumbnail}}"/>
+                                    </div>
+                                {%- endif -%}
+                                <div class="recent-post-wrapper">
+                                    <div class="recent-post-content">
+                                        {%- if post.summary -%}
+                                            {{post.summary}}
+                                        {%- endif -%}
+                                    </div>
+
+                                    <div class="post-tags">
+                                        {%- for tag in post.tags -%}
+                                            <span class="tag">#{{tag}}
+                                            </span>
+                                        {%- endfor -%}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {%- endfor -%}
+                </ul>
             {%- endif -%}
-            <div class="recent-post-wrapper">
-              <div class="recent-post-content">
-                {%- if post.summary -%} {{post.summary}} {%- endif -%}
-              </div>
-
-              <div class="post-tags">
-                {%- for tag in post.tags -%}
-                <span class="tag">#{{tag}} </span>
-                {%- endfor -%}
-              </div>
-            </div>
-          </div>
-        </li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%}
+        </div>
     </div>
-  </div>
 </div>

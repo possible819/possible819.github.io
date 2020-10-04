@@ -51,7 +51,8 @@ $on-laptop: 800px !default;
 }
 
 // Import partials.
-@import "minima/base", "minima/layout", "minima/syntax-highlighting", "syntax-highlight-monokai";
+@import "minima/base", "minima/layout", "minima/syntax-highlighting",
+  "syntax-highlight-monokai";
 
 /**
  * Customized Themes
@@ -167,6 +168,13 @@ $on-laptop: 800px !default;
   .content-wrapper {
     flex-direction: column;
   }
+  .list-header-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-header-wrapper > .posting {
+    margin: auto 0 auto auto;
+  }
 
   .list-thumbnail-wrapper {
     margin: 10px 0px 0px 0px;
@@ -266,7 +274,7 @@ code {
 }
 
 blockquote {
-  border-left-color: #0086B3;
+  border-left-color: #0086b3;
 }
 
 .page-navigator {

@@ -37,7 +37,7 @@ Jekyll 설치가 정상적으로 완료되면 CLI를 통해 프로젝트 기본 
 디렉토리를 변경한 뒤 아래의 명령어를 통해 Scaffolding을 실행 한다.
 
 ```bash
-  $ jeykell new ./
+  $ jekyll new ./
 ```
 
 <h4 id="check-result">결과 확인</h4>
